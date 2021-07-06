@@ -58,4 +58,4 @@ vogoor.addShortClassNames([
 To use in typescript you need to declare the object first
 ````js
   declare let vogoor: any;
-]);
+````
