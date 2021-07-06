@@ -1,34 +1,31 @@
 {
-  "name": "masks-js",
-  "version": "0.0.1",
-  "description": "A NPM package that exports functions to mask values.",
+  "name": "vogoor",
+  "version": "0.0.3",
+  "description": "This package creates css utility classes from property and value pair added in class attribute.",
   "main": "build/index.js",
   "scripts": {
     "test": "mocha --require babel-core/register",
-    "build": "babel ./src -d ./lib",
+    "build": "babel ./src -d ./build",
     "lint": "eslint ./src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brunokrebs/masks-js.git"
+    "url": "git+https://github.com/webvun/vogoor.git"
   },
   "keywords": [
-    "npm",
-    "node",
-    "masks",
-    "javascript"
+    "css utility class",
+    "css"
   ],
-  "author": "Bruno Krebs",
+  "author": "Webvun",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brunokrebs/masks-js/issues"
+    "url": "https://github.com/webvun/vogoor/issues"
   },
-  "homepage": "https://github.com/brunokrebs/masks-js#readme",
+  "homepage": "https://github.com/webvun/vogoor#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^7.30.0",
     "mocha": "^9.0.2"
-  },
-  "type": "module"
+  }
 }

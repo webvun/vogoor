@@ -18,7 +18,7 @@ Write class name as css property and value pair and a utilitiy class will automa
 
 ## Getting Started
 
-Import index.js in node_modules/vogoor/lib
+Import index.js in node_modules/vogoor/build
 
 ### Example Angular
 
@@ -26,7 +26,7 @@ Add the path of the package to script array in your angular.json file
 ````js
 ...
 "styles": 
-    "scripts": ["node_modules/vogoor/lib/index.js"]
+    "scripts": ["node_modules/vogoor/build/index.js"]
   },
 ...
 ````
