@@ -18,7 +18,7 @@ Write class name as css property and value pair and a utilitiy class will automa
 
 ## Getting Started
 
-import index.js in node_modules/vogoor/lib
+Import index.js in node_modules/vogoor/lib
 
 ### Example Angular
 
