@@ -1,4 +1,4 @@
-class UnderscoreCSS {
+class Vogoor {
     constructor(prefix, propertySeparator) { 
         this.prefix = prefix;
         this.propertySeparator = propertySeparator;
@@ -170,12 +170,7 @@ class UnderscoreCSS {
     }
 }
 
-
-let UnderscoreCSSObject = new UnderscoreCSS(false, ":");
-
-
-
-
+let vogoor = new Vogoor(false, ":");
 
         
 

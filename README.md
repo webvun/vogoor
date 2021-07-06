@@ -1,54 +1,61 @@
 Vogoor
 ===========
 
-Write css directly in class attribute. Generates CSS utility classes on the fly.
+Write class name as css property and value pair and a utilitiy class will automatically be generated.
+
+````js
+<h2 class = "color:red padding:20px pl:10px f:left">A Title</h2>
+````
 
 * [Installation](#installation)
 * [Getting Started](#getting-started)
 * [How To Use](#how-to-use)
+* [Customization](#customization)
 
 ## Installation
 
-    npm install lizia --save
+    npm install vogoor --save
 
 ## Getting Started
 
-### With Angular
+import index.js in node_modules/vogoor/lib
 
-**Add the path of the package to script array in your angular.json file**
+### Example Angular
+
+Add the path of the package to script array in your angular.json file
 ````js
 ...
 "styles": 
-    "scripts": ["src/libs/underscore_css/src/index.js"]
+    "scripts": ["node_modules/vogoor/lib/index.js"]
   },
 ...
 ````
 
 ## How to use
-Write the css property as classname. Default value separator is _
+Write the css property as classname. Default value separator is underscore(_)
 ````js
 <h2 class = "color:red padding:10px_20px float:left" > A Title </h2>
 ````
-Short names
+You can also add your own shortened property names 
 ````js
 <h2 class = "c:red pl:10px fl:left" > A Title </h2>
 ````
 
-## Customize
-An object of the Lizia class will be available
+## Customization
+Use the vogoor to customize
 
-*** Add short class names ***
+### Add shortened class names
 ````js
-UnderscoreCSSObject.addShortClassNames([
+vogoor.addShortClassNames([
   {name: "color", short:"c"},
   {name: "padding-top", short:"pt"},
   {name: "p", short:"padding"},
 ]);
 ````
 
-*** Typescript ***
+### Typescript 
 
-Declare first the object
+To use in typescript you need to declare the object first
 ````js
-  declare let UnderscoreCSSObject: any;
+  declare let vogoor: any;
 ]);
