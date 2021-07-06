@@ -1,0 +1,34 @@
+{
+  "name": "masks-js",
+  "version": "0.0.1",
+  "description": "A NPM package that exports functions to mask values.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "mocha --require babel-core/register",
+    "build": "babel ./src -d ./lib",
+    "lint": "eslint ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunokrebs/masks-js.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "masks",
+    "javascript"
+  ],
+  "author": "Bruno Krebs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunokrebs/masks-js/issues"
+  },
+  "homepage": "https://github.com/brunokrebs/masks-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^7.30.0",
+    "mocha": "^9.0.2"
+  },
+  "type": "module"
+}
