@@ -25,9 +25,9 @@ Import index.js in node_modules/vogoor/build
 Add the path of the package to script array in your angular.json file
 ````js
 ...
-"styles": 
-    "scripts": ["node_modules/vogoor/build/index.js"]
-  },
+
+  "scripts": ["node_modules/vogoor/build/index.js"]
+
 ...
 ````
 
