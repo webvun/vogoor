@@ -1,6 +1,6 @@
 {
   "name": "vogoor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This package creates css utility classes from property and value pair added in class attribute.",
   "main": "build/index.js",
   "scripts": {
