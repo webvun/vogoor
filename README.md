@@ -14,20 +14,33 @@ Write class name as css property and value pair and a utilitiy class will automa
 
 ## Installation
 
-    npm install vogoor --save
+    npm install vogoor
 
 ## Getting Started
 
-Import index.js in node_modules/vogoor/build
+You need to run the script **vogoor/build/start.js** from your task runner and watch for changes.
 
-### Example Angular
+### Example package.json
 
-Add the path of the package to script array in your angular.json file
+Here using [npm-watch](<https://www.npmjs.com/package/npm-watch>) to watch for changes.
 ````js
 ...
+    ...
 
-  "scripts": ["node_modules/vogoor/build/index.js"]
+    "watch": {
+      "vogoor": {
+        "patterns": [
+          "src"
+        ],
+        "extensions": "html"
+      }
+    },
+    "scripts": {
+      "watch": "npm-watch",
+      "vogoor": "node node_modules/vogoor/build/start.js \"<PATH_TO_YOUR_MAIN_CSS_FILE>\" \"PATH_TO_DIRECTORY_OF_YOUR_HTML_FILES>\" "
+    },
 
+    ...
 ...
 ````
 
@@ -42,20 +55,30 @@ You can also add your own shortened property names
 ````
 
 ## Customization
-Use the vogoor to customize
+Once the script runs, a config file will be generated in the root directory of your application.
 
-### Add shortened class names
+### vogoor.conf.json
 ````js
-vogoor.addShortClassNames([
-  {name: "color", short:"c"},
-  {name: "padding-top", short:"pt"},
-  {name: "p", short:"padding"},
-]);
+    {
+        "cssFilePath": "test.css",
+        "htmlDirPath": "src",
+        "prefix": false,
+        "propertySeparator": ":",
+        "valueSeparator": "_",
+        "shortClassNames": [
+            {
+                "name": "color",
+                "short": "c"
+            },
+            {
+                "name": "padding-top",
+                "short": "pt"
+            },
+            {
+                "name": "p",
+                "short": "padding"
+            }
+        ],
+    }
 ````
 
-### Typescript 
-
-To use in typescript you need to declare the object first
-````js
-  declare let vogoor: any;
-````
