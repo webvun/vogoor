@@ -1,6 +1,6 @@
 {
   "name": "vogoor",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "This package creates css utility classes from property and value pair added in class attribute.",
   "main": "build/index.js",
   "scripts": {
@@ -44,6 +44,5 @@
     "@babel/core": "^7.14.6",
     "babel-preset-es2015": "^6.24.1",
     "cheerio": "^1.0.0-rc.10"
-  },
-  "type": "module"
+  }
 }
