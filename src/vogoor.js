@@ -12,7 +12,7 @@ class Vogoor {
         return [
             {name: "color", short:"c"},
             {name: "padding-top", short:"pt"},
-            {name: "p", short:"padding"},
+            {name: "padding", short:"p"},
         ];
     }
 

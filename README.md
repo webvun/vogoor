@@ -45,7 +45,7 @@ Package.json
     "scripts": {
       "watch": "npm-watch",
       "vogoor": "node node_modules/vogoor/build/start.js \"<path-to-your-main-css-file>\" \"<path-to-your_html_files_folder>\" "
-      "build": "vogoor"
+      "build": "npm run watch vogoor"
     },
 
     ...
@@ -88,8 +88,8 @@ First time the script runs, a config file will be generated in the root folder o
                 "short": "pt"
             },
             {
-                "name": "p",
-                "short": "padding"
+                "name": "padding",
+                "short": "p"
             }
         ],
     }
