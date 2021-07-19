@@ -1,7 +1,7 @@
 Vogoor
 ===========
 
-Write class name as css property and value pair and a utilitiy class will automatically be generated.
+By using this package you will be able to write pure css directly in class attributes. This way reading and writing css utility classes gets much easier. The css class selectors will be created on build time and added to your main css file.
 
 ````js
 <h2 class = "color:red padding:20px pl:10px f:left">A Title</h2>
@@ -17,12 +17,19 @@ Write class name as css property and value pair and a utilitiy class will automa
     npm install vogoor
 
 ## Getting Started
+Configure your build script to run **node_modules/vogoor/build/start.js** and watch for changes in your html files. Pass the path to your main css file and the html files folder.
 
-You need to run the script **vogoor/build/start.js** from your task runner and watch for changes.
+````js
+    node node_modules/vogoor/build/start.js <path-to-your-main-css-file> <path-to-your_html_files_folder>
+````
+path-to-your-main-css-file = The newly generated class selectors will be added to this file.<br />
+path-to-your_html_files_folder = The script will go through the html files in this folder.
 
-### Example package.json
+ 
+### Example build
 
-Here using [npm-watch](<https://www.npmjs.com/package/npm-watch>) to watch for changes.
+Package.json
+
 ````js
 ...
     ...
@@ -30,22 +37,28 @@ Here using [npm-watch](<https://www.npmjs.com/package/npm-watch>) to watch for c
     "watch": {
       "vogoor": {
         "patterns": [
-          "src"
+          "<path-to-your_html_files_folder>"
         ],
         "extensions": "html"
       }
     },
     "scripts": {
       "watch": "npm-watch",
-      "vogoor": "node node_modules/vogoor/build/start.js \"<PATH_TO_YOUR_MAIN_CSS_FILE>\" \"PATH_TO_DIRECTORY_OF_YOUR_HTML_FILES>\" "
+      "vogoor": "node node_modules/vogoor/build/start.js \"<path-to-your-main-css-file>\" \"<path-to-your_html_files_folder>\" "
+      "build": "vogoor"
     },
 
     ...
 ...
 ````
 
+Command **npm run build** will run the script vogoor and watch for changes in your html files.
+
+This example uses the package [npm-watch](<https://www.npmjs.com/package/npm-watch>) to watch for changes in html files. Install it if you have not already done. 
+
+
 ## How to use
-Write the css property as classname. Default value separator is underscore(_)
+Write the css property as classname. Default value separator is underscore.
 ````js
 <h2 class = "color:red padding:10px_20px float:left" > A Title </h2>
 ````
@@ -55,13 +68,13 @@ You can also add your own shortened property names
 ````
 
 ## Customization
-Once the script runs, a config file will be generated in the root directory of your application.
+First time the script runs, a config file will be generated in the root folder of your application.
 
 ### vogoor.conf.json
 ````js
     {
-        "cssFilePath": "test.css",
-        "htmlDirPath": "src",
+        "cssFilePath": "",
+        "htmlDirPath": "",
         "prefix": false,
         "propertySeparator": ":",
         "valueSeparator": "_",
