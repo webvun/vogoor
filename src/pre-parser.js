@@ -101,7 +101,7 @@ class PreParser extends Vogoor {
                         self.newCssSelectors = (translatedClass.name + " {" + translatedClass.propertyName+': '+translatedClass.propertyValue + ";}");
                         if (!self.cssFileContent.includes(self.newCssSelectors)) {
                             self.cssFileContent += self.newCssSelectors+"\n";
-                            fs.writeFile(self.config.cssFilePath, self.cssFileContent, 'utf-8', (err) => {
+                            fs.writeFile(self.cssFilePath, self.cssFileContent, 'utf-8', (err) => {
                                 if (err) throw err;
                                 
                             });

@@ -54,8 +54,6 @@ Package.json
 
 Command **npm run build** will run the script vogoor and watch for changes in your html files.
 
-This example uses the package [npm-watch](<https://www.npmjs.com/package/npm-watch>) to watch for changes in html files. Install it if you have not already done. 
-
 
 ## How to use
 Write the css property as classname. Default value separator is underscore.
