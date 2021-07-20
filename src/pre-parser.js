@@ -14,8 +14,6 @@ class PreParser extends Vogoor {
 
     configure() {
         this.config = {
-            cssFilePath: this.cssFilePath, 
-            htmlDirPath: this.htmlDirPath,
             prefix: this.prefix,
             propertySeparator: this.propertySeparator,
             valueSeparator: this.valueSeparator,
@@ -24,8 +22,6 @@ class PreParser extends Vogoor {
 
         if (fs.existsSync("./vogoor.conf.json")) {
             let configFile = JSON.parse(fs.readFileSync("./vogoor.conf.json", {encoding:'utf8'}));
-            this.cssFilePath =  configFile.cssFilePath;
-            this.htmlDirPath =  configFile.htmlDirPath;
             this.shortClassNames = configFile.shortClassNames;
             this.prefix = configFile.prefix,
             this.propertySeparator = configFile.propertySeparator,

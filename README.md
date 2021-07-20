@@ -96,4 +96,4 @@ First time the script runs, a config file will be generated in the root folder o
 ````
 
 ## Demo
-Check out the demo [Here](<https://github.com/webvun/demo-vogoor>) to see how to it is installed used.
+Check out the demo [here](<https://github.com/webvun/demo-vogoor>) to see how to it is installed and used.
