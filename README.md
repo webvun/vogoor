@@ -1,7 +1,7 @@
 Vogoor
 ===========
 
-By using this package you will be able to write pure css directly in class attributes. This way reading and writing css utility classes gets much easier. The css class selectors will be created on build time and added to your main css file.
+By using this package you will be able to write pure css directly in class attributes. This way reading and writing css utility classes gets much easier. The css class selectors will be created on build time and added to your main css file. [Here](<https://github.com/webvun/demo-vogoor>) is a demo.
 
 ````js
 <h2 class = "color:red padding:20px pl:10px f:left">A Title</h2>
@@ -95,3 +95,5 @@ First time the script runs, a config file will be generated in the root folder o
     }
 ````
 
+## Demo
+Check out the demo [Here](<https://github.com/webvun/demo-vogoor>) to see how to it is installed used.
