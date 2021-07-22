@@ -1,6 +1,6 @@
 {
   "name": "vogoor",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "This package creates css utility classes from property and value pair added in class attribute.",
   "main": "build/index.js",
   "scripts": {
@@ -17,12 +17,24 @@
   "keywords": [
     "css utility classes",
     "css",
-    "css framework"
+    "css framework",
+    "frontend", 
+    "front-end",
+    "ui",
+    "design",
+    "preprocessor",
+    "utility",
+    "style",
+    "styles",
+    "stylesheet",
+    "css utility class",
+    "css in html"
   ],
   "author": "Webvun",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webvun/vogoor/issues"
+    "url": "https://github.com/webvun/vogoor/issues",
+    "email": "webvun@hotmail.com"
   },
   "homepage": "https://vogoor.com",
   "devDependencies": {
